@@ -1,0 +1,17 @@
+@import 'themes';
+
+@import '~@nebular/theme/styles/globals';
+@import '~@nebular/bootstrap/styles/globals';
+
+// global app font size
+@import './font-size';
+
+@import './bootstrap-rtl';
+
+@include nb-install() {
+  @include nb-theme-global();
+  @include nb-bootstrap-global();
+  @include bootstrap-rtl();
+
+};
+/* You can add global styles to this file, and also import other style files */

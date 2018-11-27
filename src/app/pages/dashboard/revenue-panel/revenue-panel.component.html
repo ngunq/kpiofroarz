@@ -1,0 +1,21 @@
+<nb-card size="large">
+  <!-- <nb-card-header>Revenue</nb-card-header> -->
+  <nb-tabset fullWidth (changeTab)="changeTab($event)">
+    <nb-tab tabTitle="Revenue">
+      <div class="chart-container">
+        <kpi-revenue-panel-summary [summary]="chartPanelSummary"></kpi-revenue-panel-summary>
+        <kpi-revenue-panel-header #revenueHeader (periodChange)="setPeriodAndGetChartData($event)" (metricChange)="setMetricAndGetChartData($event)">
+        </kpi-revenue-panel-header>
+        <kpi-revenue-chart #revenueChart [revenueChartData]="revenueChartData" [metrics]="metrics"></kpi-revenue-chart>
+      </div>
+    </nb-tab>
+    <nb-tab tabTitle="Detail" [lazyLoad]="true">
+      <div class="chart-container">
+        <kpi-revenue-panel-summary [summary]="chartPanelSummary"></kpi-revenue-panel-summary>
+        <!-- <kpi-revenue-panel-header (periodChange)="setPeriodAndGetChartData($event)" (metricChange)="setMetricAndGetChartData($event)"> -->
+        <!-- </kpi-revenue-panel-header> -->
+        <!-- <ngx-profit-chart #profitChart [profitChartData]="profitChartData"></ngx-profit-chart> -->
+      </div>
+    </nb-tab>
+  </nb-tabset>
+</nb-card>

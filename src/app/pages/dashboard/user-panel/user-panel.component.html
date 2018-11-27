@@ -1,0 +1,17 @@
+<nb-reveal-card [showToggleButton]="false" [revealed]="revealed">
+  <nb-card-front>
+    <nb-card size="small">
+      <kpi-user-panel-header (periodChange)="setPeriod($event)"></kpi-user-panel-header>
+      <kpi-user-panel-front [frontCardData]="activeUserListData"></kpi-user-panel-front>
+      <i class="nb-arrow-up" (click)="toggleView()"></i>
+    </nb-card>
+  </nb-card-front>
+  <nb-card-back>
+    <nb-card size="small">
+      <kpi-user-panel-header (periodChange)="setPeriod($event)"></kpi-user-panel-header>
+      <kpi-user-panel-back [activeUserChartData]="activeUserChartData"></kpi-user-panel-back>
+      <!-- <kpi-user-panel-back></kpi-user-panel-back> -->
+      <i class="nb-arrow-down" (click)="toggleView()"></i>
+    </nb-card>>
+  </nb-card-back>
+</nb-reveal-card>

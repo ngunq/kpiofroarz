@@ -1,0 +1,41 @@
+<nb-card-header>
+  <div class="header-container">
+    <!-- <div class="icon">
+      <i class="icon ion-md-information-circle-outline"></i>
+    </div> -->
+    <span class="title">Infomation</span>
+  </div>
+</nb-card-header>
+<nb-card-body class="p-0">
+  <!-- <div class="info">
+    <div class="period">
+      <span class="time-interval">Jun 1 - Jun 30</span>
+      <div class="value">
+        <span class="currency">$</span>
+        300
+      </div>
+    </div>
+    <div class="period latest">
+      <span class="time-interval">Jul 1 - Jul 31</span>
+      <div class="value">
+        <span class="currency">$</span>
+        860
+      </div>
+    </div>
+  </div> -->
+  <ul class="traffic-list">
+    <li *ngFor="let detail of details">
+      <div class="date">{{ detail.key }}</div>
+      <div class="value">{{ detail.value }}</div>
+      <!-- <div class="delta"
+           [class.up]="item.delta.up"
+           [class.down]="!item.delta.up">
+        {{ item.delta.value }}%
+      </div> -->
+      <!-- <kpi-user-bar [barData]="item.comparison"
+                       [successDelta]="item.delta.up">
+      </kpi-user-bar> -->
+    </li>
+  </ul>
+  <!-- <kpi-prod-info-panel-ares-chart></kpi-prod-info-panel-ares-chart> -->
+</nb-card-body>

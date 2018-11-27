@@ -1,0 +1,14 @@
+<nb-flip-card [showToggleButton]="false" [flipped]="flipped">
+  <nb-card-front>
+    <nb-card size="xsmall">
+      <kpi-prod-info-panel-front></kpi-prod-info-panel-front>
+      <i class="nb-arrow-right" (click)="toggleView()"></i>
+    </nb-card>
+  </nb-card-front>
+  <nb-card-back>
+    <nb-card size="xsmall">
+      <kpi-prod-info-panel-back></kpi-prod-info-panel-back>
+      <i class="nb-arrow-right" (click)="toggleView()"></i>
+    </nb-card>
+  </nb-card-back>
+</nb-flip-card>

@@ -1,0 +1,33 @@
+<div class="chart-header">
+  <kpi-legend-chart [legendItems]="chartLegend"></kpi-legend-chart>
+  <div class="select-header">
+    <nb-select class="metric-select" multiple placeholder="Metrics" [(ngModel)]="metric" (selectedChange)="changeMetric()" hero status="primary">
+      <nb-option *ngFor="let m of metrics" value="{{m}}">{{ metricsName[m] }}</nb-option>
+    </nb-select>
+
+    <nb-select fullWidth placeholder="Time Period" [(ngModel)]="type" (selectedChange)="changePeriod()" hero status="primary">
+      <nb-option *ngFor="let period of types" value="{{period}}">{{ period }}</nb-option>
+    </nb-select>
+  </div>
+
+
+  <!-- <div [class]="currentTheme === 'corporate' ? 'dropdown ghost-dropdown' : 'dropdown'" ngbDropdown>
+    <button class="btn btn-primary" id="dropdownBasic1" ngbDropdownToggle>{{type}}</button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <button class="dropdown-item" *ngFor="let period of types" (click)="changePeriod(period)">{{period}}</button>
+    </div>
+  </div> -->
+
+  <!-- <div [class]="currentTheme === 'corporate' ? 'dropdown ghost-dropdown' : 'dropdown'" ngbDropdown>
+    
+    <button type="button" ngbDropdownToggle [class]="currentTheme === 'default' ? 'btn btn-outline-success' : 'btn btn-primary'">
+    {{ type }}
+    </button>
+    
+    <ul class="dropdown-menu" ngbDropdownMenu>
+      <li class="dropdown-item" *ngFor="let period of types" (click)="changePeriod(period)">
+        {{ period }}
+      </li>
+    </ul>
+  </div> -->
+</div>
